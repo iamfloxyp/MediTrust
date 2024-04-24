@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/eaf93db9ac.js" crossorigin="anonymous"></script>
+  <title>MedTrust Sign In Page</title>
+</head>
+
+<body>
+  <div class="body_container">
+    <div class="form_container">
+      <div class="left_container">
+        <div class="left_container_text">
+          <h2>Welcome to MedTrust</h2>
+          <p>
+            Ensuring Patient Safety with Our Medication Authentication
+            Platform
+          </p>
+          <!-- <img src="images/rightsidebackground.png" alt=""> -->
+        </div>
+      </div>
+      <div class="forms_right_container">
+        <div class="content">
+          <h1>Sign In</h1>
+          <form  method="POST" id="login-form">
+            <div class="input_group">
+              <div class="input_field">
+                <label for="user">Email/Username</label>
+                <input type="text" placeholder="Enter email/username" name="user" id="email" required />
+              </div>
+              <div class="input_field input_password">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter password" name="password" id="password" minlength="8"
+                  maxlength="64" required />
+                <i class="fa fa-eye-slash" id="hide-password"></i>
+              </div>
+            </div>
+            <div class="remember_forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="formforgotpassword.html">Forgot password?</a>
+            </div>
+            <div class="btn_container">
+              <button class="btn_signin btn" id="signin-button">Sign In</button>
+              <a href="drughome.html" class="btn" >Sign in with google</a>
+            </div>
+
+            <div class="register_link">
+              <p>
+                Don't have an account? <a href="formregister.html">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4a8PtVhjjyLaWLKOHh4qmeSnK-akUVyo",
+      authDomain: "capstone-61bd7.firebaseapp.com",
+      projectId: "capstone-61bd7",
+      storageBucket: "capstone-61bd7.appspot.com",
+      messagingSenderId: "546548642434",
+      appId: "1:546548642434:web:b26fbe8f7cbbb5202c3a9b",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script>
+
+document.getElementById("signin-button").addEventListener("click", function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function () {
+          // Redirect to dashboard if sign-in successful
+          window.location.href = "drughome.html";
+        })
+        .catch(function (error) {
+          console.error(error.message);
+          // Redirect to sign-up page if sign-in fails
+        alert('Wrong username or password, register if you do not have an account')
+        });
+    });
+  </script>
+  </script>
+
+
+</body>
+
+</html>

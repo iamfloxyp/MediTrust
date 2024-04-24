@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Medtrust scan home</title>
+</head>
+<body>
+    <div class="entercode-container">
+        <div class="entercode-box">
+            <div class="entercode-nav" style="height: 7%;">
+                <div class="logo-nav">
+                    <img src="./images/MedTrustlogo_withtext.png" alt="">
+                </div>
+               <div class="entercode-nav2">
+                  <img src="./images/nav_notification.png" alt="">
+                  <img src="./images/profile_icon.png" alt="">
+               </div>
+            </div>
+            <hr>
+            <div class="entercode-main">
+                <div class="main-list">
+                    <div class="menu-list1">
+                        <h4>MAIN MENU</h4>
+                        <div class="menu-bar1">
+                            <div class="menu1">
+                                <i class="fa fa-home"></i> 
+                                <a href="drughome.html">Home</a>
+                            </div>
+                            <div class="menu1">
+                                <i class="fas fa-qrcode"></i>
+                                <a href="scanactivate.html">Verify</a>
+                            </div>
+                            <div class="menu1">
+                                <i class="fa fa-bell"></i> 
+                                <a href="notification.html">Notification</a>
+                            </div>
+                            <div class="menu1">
+                                <i class="fa fa-minus-square-o"></i> 
+                                <a href="blogpost.html">Blog</a >
+                            </div>
+                            </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="menu-list2" >
+                        <h4>PREFERENCES</h4>
+                        <div class="menu-bar2">
+                            <div class="menu2">
+                                <i class="fa fa-cog"></i>
+                                <a href="settings.html">Settings</a>
+                            </div>
+
+                            <div class="menu2">
+                                <i class="fa fa-question-circle"></i>
+                                <a href="helpcenter.html">Help Center</a>
+                            </div>
+
+                            <div class="menu2">
+                                <i class="fa fa-sign-out"></i>
+                                <a href="logout.html">Log out</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="main-list2">
+                    <div class="main1-list2">
+                        <a href="drughome.html">Home</a>
+                        <i class="fa fa-angle-right"></i>
+                        <a href="scanactivate.html">verify</a>
+                        <i class="fa fa-angle-double-right"></i>
+                        <a href="scancode.html">Enter Code</a>
+                    </div>
+
+                    <div class="main2-list2">
+                        <h2>Enter Drug Information</h2>
+                    </div>
+                    <div class="druginfo">
+                        <div class="drugInput">
+                            <label for="">Drug Brand Name</label>
+                            <input type="text" id="brandName">
+                        </div>
+
+                        <div class="drugInput">
+                            <label for="">Drug Batch Number</label>
+                            <input type="text" id="batchNumber">
+                        </div>
+                        <div class="drugInput-btn">
+                            <button onclick="redirectToScanCodeResult()">Enter</button>
+                        </div>
+                    </div>
+
+
+
+                    
+                </div>
+
+                
+            
+                
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function redirectToScanCodeResult() {
+            // Retrieve values from input fields
+            var brandName = document.getElementById("brandName").value;
+            var batchNumber = document.getElementById("batchNumber").value;
+            
+            // Redirect to scancoderesult.html with query parameters
+            window.location.href = "scancoderesult.html?brandName=" + encodeURIComponent(brandName) + "&batchNumber=" + encodeURIComponent(batchNumber);
+        }
+    </script>
+</body>
+</html>

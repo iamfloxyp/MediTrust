@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/eaf93db9ac.js" crossorigin="anonymous"></script>
+  <title>MedTrust Register Page</title>
+</head>
+
+<body>
+  <div class="body_container">
+    <div class="form_container">
+      <div class="left_container">
+        <div class="left_container_text">
+          <h2>Welcome to MedTrust</h2>
+          <p>
+            Ensuring Patient Safety with Our Medication Authentication
+            Platform
+          </p>
+
+        </div>
+      </div>
+      <div class="forms_right_container">
+        <div class="content">
+          <div class="top_nav">
+            <div class="back">
+              <i class="fa fa-angle-left"></i><span>Back</span>
+            </div>
+
+          </div>
+          <h1>Register</h1>
+
+          <div class="line-container">
+            <div class="line">
+              <div id="line1" class="coloured"></div>
+              <div id="line2"></div>
+              <div id="line3"></div>
+              <div id="line4"></div>
+            </div>
+            <h4>1/4</h4>
+          </div>
+          <form action="/signup" method="POST" id="register-form">
+            <div class="input_group">
+              <div class="input_field">
+                <label for="user">Enter Your Full Name</label>
+                <input type="text" placeholder="Enter Full Name" name="user" id="user" required />
+              </div>
+              <div class="input_field input_email">
+                <label for="email">Enter Your Email</label>
+                <input type="email" placeholder="Enter Email" name="email" id="email" required />
+              </div>
+              <div class="input_field input_password">
+                <label for="password"> Enter Your Password</label>
+                <input type="password" placeholder="Enter password" name="password" id="password" minlength="8"
+                  maxlength="64" required />
+                <i class="fa fa-eye-slash" id="hide-password"></i>
+
+                <div class="password_checklist">
+                  <h3 class="checklist_title">
+                    Password should be the following:
+                  </h3>
+                  <ul class="checklist">
+                    <li class="list-item">At least 8 characters long</li>
+                    <li class="list-item">At least 1 number</li>
+                    <li class="list-item">At least 1 lowercase letter</li>
+                    <li class="list-item">At least 1 uppercase letter</li>
+                    <li class="list-item">At least 1 special character</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="input_field input_password">
+                <label for="confirm-password">Confirm Your Password</label>
+                <input type="password" placeholder="Enter password" name="password" id="confirm-password" minlength="8"
+                  maxlength="64" required />
+                <i class="fa fa-eye-slash" id="hide-confirm-password"></i>
+              </div>
+              <p id="message"></p>
+
+              <div class="input_field input_field2">
+                <label for="role">Role</label>
+                <select name="" id="role" required>
+                  <option value="" disabled selected>Select</option>
+                  <option value="">Health Professional</option>
+                  <option value="">Health Insurance Personnel</option>
+                  <option value="">Patient</option>
+                </select>
+              </div>
+            </div>
+            <div class="btn_container">
+              <button class="btn_signin btn" type="submit" id="register-button">
+                Register
+              </button>
+
+            </div>
+            <div class="register_link">
+              <p>
+                Already have an account? <a href="formsignin.html">Sign In</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4a8PtVhjjyLaWLKOHh4qmeSnK-akUVyo",
+      authDomain: "capstone-61bd7.firebaseapp.com",
+      projectId: "capstone-61bd7",
+      storageBucket: "capstone-61bd7.appspot.com",
+      messagingSenderId: "546548642434",
+      appId: "1:546548642434:web:b26fbe8f7cbbb5202c3a9b",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script>
+    document
+      .getElementById("register-button")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const checkpassword = checkPassword();
+        if (!checkpassword) {
+          console.log('wont work')
+          return;
+        }
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then(function (userCredential) {
+            // Send email verification
+            return userCredential.user.sendEmailVerification();
+          })
+          .then(function () {
+            // Redirect to verification page
+            window.location.href = "formverification.html";
+          })
+          .catch(function (error) {
+            console.error(error.message);
+          });
+      });
+  </script>
+</body>
+
+</html>
