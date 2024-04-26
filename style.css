@@ -4995,6 +4995,7 @@ flex-direction: column;
   font-family: "Montserrat", sans-serif;
 }
 
+
 .notification-main .main-list2a {
   display: flex;
   position: relative;
@@ -5058,10 +5059,13 @@ flex-direction: column;
 }
 .notification-main .main2-text1 {
   position: relative;
-  bottom: 80px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  bottom: 80px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .notification-main .main1-text2 {
   display: flex;
@@ -5070,19 +5074,20 @@ flex-direction: column;
 .notification-main .main1-text2 i {
   height: 24px;
   width: 24px;
-  color: #db1b00;
+  color: #00B7CB;
 }
-.notification_header {
+/* .notification_header {
   display: flex;
   justify-content: space-between;
   padding-right: 40px;
-}
+} */
 .notification-main .main1-text2a h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 19.5px;
   color: #000000;
+
 }
 
 .notification-main .main1-text2a {
@@ -5098,10 +5103,10 @@ flex-direction: column;
   padding-bottom: 0.5rem;
 }
 
-.notification-main .main1-text2a .notification_header {
+/* .notification-main .main1-text2a .notification_header {
   display: flex;
   justify-content: space-between;
-}
+} */
 .notification-main .main1-text2a p {
   margin-top: 15px;
   font-family: "Montserrat", sans-serif;
@@ -5111,9 +5116,9 @@ flex-direction: column;
   color: #474747;
 }
 
-.notification_header h4 {
+/* .notification_header h4 {
   left: 0 !important;
-}
+} */
 
 .notification-main .main2a-box {
   position: relative;
@@ -5785,7 +5790,6 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 .notification-main .menu1{
     display: flex;
@@ -6075,7 +6079,7 @@ flex-direction: column;
 /* Notification message page */
 
 .notimessage-container{
-  height: 1000px;
+  height: 1200px;
   width: 100%;  
   display: flex;
   justify-content: center; 
@@ -6085,7 +6089,7 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   
 }
@@ -6173,7 +6177,7 @@ flex-direction: column;
 .notimessage-main .menu-list2{
     padding:  20px;
     position: relative;
-   bottom: 180px;
+   bottom: 150px;
   }
 .notimessage-main .menu2-list2 h4{
       margin-bottom: 10px;
@@ -6266,7 +6270,7 @@ flex-direction: column;
 }
 .notimessage-main .main-texta{
   position: relative;
-  top: 250px;
+  top: 230px;
 }
 .notimessage-main .main-texta h4{
   color: #00B7CB;
@@ -6279,6 +6283,38 @@ flex-direction: column;
 .notimessage-main .main-textb{
   margin-top: 20px;
   gap: 8px;
+}
+.notimessage-main .fakeProduct{
+  position: relative;
+  top: 2rem;
+}
+.notimessage-main .fakeProduct h2{
+  line-height: 19.5px;
+  font-size: 2rem;
+  color: #1A1A1A;
+}
+.notimessage-main .fakeProduct p{
+  margin-top: 1rem;
+  line-height: 19.5px;
+  font-size: 1rem;
+}
+.notimessage-main .fakedetails{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+.notimessage-main .fakedetails span{
+  color: #626365;
+  padding: 0.2rem;
+}
+.notimessage-main .image-fake{
+  position: relative;
+  top: 2rem;
+}
+.notimessage-main .image-fake img{
+  border-radius: 1rem;
 }
 
 .notimessage-main .main-textb input{
