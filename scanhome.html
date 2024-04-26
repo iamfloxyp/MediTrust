@@ -86,19 +86,19 @@
                                 <div class="main2a-box1a">
                                     <h3>Quick Scan</h3>
                                     <p>Simply point device's camera at the QR code on yur medication packaging, and let our system do the rest. Within  seconds, you'll recieve a definitive verdict on the authenticity of your medication </p>
-                                    <button>Scan</button>
+                                    <button onclick="redirectToScan()">Scan</button>
                                 </div>
                             </div>
                             <div class="main2a-box1">
                                 <div class="main2a-box1a">
                                     <h3>Enter Code</h3>
                                     <p>Prefer to manually input your drug details? Noproblem. Enter the brand name abd batch number , aand we'll swiftly authenticate your medication, ensuring accuracy every step of the way </p>
-                                    <button>Enter Code</button>
+                                    <button onclick="redirectToEnterCode()">Enter Code</button>
                                 </div>
                             </div>
                             
                         </div>
-                    
+                
                 </div>
 
                 
@@ -108,5 +108,14 @@
             
         </div>
     </div>
+    <script>
+        function redirectToScan() {
+            window.location.href = "scanreal1.html";
+        }
+
+        function redirectToEnterCode() {
+            window.location.href = "scancode.html";
+        }
+    </script>
 </body>
 </html>
