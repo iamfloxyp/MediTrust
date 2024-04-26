@@ -128,7 +128,7 @@
 
                 <div class="blog_details_img">
 
-                    <img class="full-img" src="images/antimalaria1.png" alt="">
+                 <img class="full-img" src="images/antimalaria1.png" alt="">
 
                 </div>
                 <p>
@@ -139,12 +139,13 @@
                 </p>
             </section>
             <section class="blog_info home_info">
-
-                <div class="blog_info_details drug_listing home_details">
+                    <div class="blog_info_details drug_listing home_details" onclick="redirectToPage('antimalariadetails.html')">
                     <div class="overlay-gradient"></div>
-                    <img src="images/anti_malaria1.png" alt="">
+                    <img src="images/anti_malaria1.png" alt="" >
                     <h3 class="anti_malaria">Artheget EZ</h3>
                 </div>
+
+                
                 <div class="blog_info_details drug_listing home_details">
                     <div class="overlay-gradient"></div>
                     <img src="images/anti_malaria2.png" alt="">
@@ -203,6 +204,11 @@
 
     </section>
 
+    <script>
+        function redirectToPage(page){
+            window.location.href = page
+        }
+    </script>
 
 </body>
 

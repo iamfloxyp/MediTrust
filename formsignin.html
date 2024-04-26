@@ -29,6 +29,7 @@
       <div class="forms_right_container">
         <div class="content">
           <h1>Sign In</h1>
+          <div id="popup" style="text-align: center; background-color: #00b7cb; height: 1.5rem; border-radius: 1rem; display: none;" > <p>Sign-in successful</p> </div>
           <form  method="POST" id="login-form">
             <div class="input_group">
               <div class="input_field">
@@ -87,8 +88,12 @@ document.getElementById("signin-button").addEventListener("click", function (eve
 
       firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function () {
+          // pop up message
+          document.getElementById("popup").style.display = "block"; // Show the pop-upx
+
           // Redirect to dashboard if sign-in successful
-          window.location.href = "drughome.html";
+          window.location.href = "formprofile.html";
+      
         })
         .catch(function (error) {
           console.error(error.message);

@@ -2620,12 +2620,13 @@ padding:  20px;
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
+ 
 }
 .scan6-box {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: #fbfbfb;
 }
 .scan6-nav {
@@ -2663,7 +2664,7 @@ padding:  20px;
 
 .scan6-main .main-list {
   width: 20%;
-  height: 70%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2712,7 +2713,7 @@ padding:  20px;
 .scan6-main .menu-list2 {
   padding: 20px;
   position: relative;
-  /* bottom: 200px; */
+  bottom: 200px;
 }
 .scan6-main .menu2-list2 h4 {
   margin-bottom: 10px;
@@ -2751,7 +2752,7 @@ padding:  20px;
   width: 267px;
   border: 1px solid #c9f3fb;
   position: relative;
-  /* bottom: 100px; */
+  bottom: 100px;
 }
 
 .scan6-main .main1-list2 a {
@@ -3093,6 +3094,12 @@ padding:  20px;
   position: relative;
   left: 150px;
   gap: 20px;
+
+}
+.entercode-main form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .entercode-main .drugInput{
   display: flex;
@@ -3111,7 +3118,7 @@ padding:  20px;
   border-radius: 16px;
   border: 1px solid #5DC2EA;
 }
-.entercode-main .drugInput-btn button{
+.entercode-main .drugInput-btn input[type ="submit"]{
   height: 56px;
   width: 468px;
   margin-top: 8px;
@@ -3119,7 +3126,7 @@ padding:  20px;
   border-radius: 16px;
   background-color: #00B7CB;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 19.5px;
   font-weight: 500;
   align-items: center;
@@ -3357,8 +3364,8 @@ padding:  20px;
   margin-right: 50px;
 }
 
-.rotate{
-  animation: rotation 15s linear infinite;
+.drugentercode .rotate{
+  animation: rotation 10s linear infinite;
 }
 @keyframes rotation{
   from{
@@ -7403,8 +7410,8 @@ font-family: "Montserrat" sans-serif;
   /* background-color: #00B7CB; */
   display: flex;
   position: absolute;
-  left: 46rem;
-  top: 21rem;
+  left: 44.5rem;
+  top: 0.8rem;
 }
 
 .toggle_container4 input {
@@ -7944,3 +7951,36 @@ padding: 2.5rem;
   color: #1a1a1a;
   background: #00b7cb;
 }
+
+
+/* styling for fake drug for enter code button */
+
+ .fakedrug{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+ }
+ .fakedrug img{
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+  left: 10rem;
+  border-radius: 1rem;
+ }
+ .fakedrug p{
+  line-height: 19.5px;
+  color: #1A1A1A;
+ }
+ .fakedrug button{
+  height: 3rem;
+  width: 10rem;
+  position: relative;
+  left: 23rem;
+  font-size: 15px;
+  border: none;
+  line-height: 19.5px;
+  border-radius: 1rem;
+  background-color: #00b7cb;
+  
+ }
+ 

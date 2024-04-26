@@ -83,19 +83,23 @@
                         <h2>Enter Drug Information</h2>
                     </div>
                     <div class="druginfo">
-                        <div class="drugInput">
-                            <label for="">Drug Brand Name</label>
-                            <input type="text" id="brandName">
-                        </div>
+                        <form action="" id="drugForm">
+                            <div class="drugInput">
+                                <label for="drugName">Drug Brand Name</label>
+                                <input type="text" id="brandName" name="drugName" required>
+                            </div>
+    
+                            <div class="drugInput">
+                                <label for="batchNumber">Drug Batch Number</label>
+                                <input type="text" id="batchNumber" name="batchNumber" required>
+                            </div>
+                            <div class="drugInput-btn">
+                                <input type="submit" value="submit">
+                            </div>
+                        </form>
 
-                        <div class="drugInput">
-                            <label for="">Drug Batch Number</label>
-                            <input type="text" id="batchNumber">
-                        </div>
-                        <div class="drugInput-btn">
-                            <button onclick="redirectToScanCodeResult()">Enter</button>
-                        </div>
                     </div>
+
 
 
 
@@ -109,15 +113,22 @@
             
         </div>
     </div>
+    
+    <!-- <script src="./scancode.js"></script> -->
     <script>
-        function redirectToScanCodeResult() {
-            // Retrieve values from input fields
-            var brandName = document.getElementById("brandName").value;
-            var batchNumber = document.getElementById("batchNumber").value;
+        document.getElementById('drugForm').addEventListener('submit', function(event) {
+            event.preventDefault();
             
-            // Redirect to scancoderesult.html with query parameters
-            window.location.href = "scancoderesult.html?brandName=" + encodeURIComponent(brandName) + "&batchNumber=" + encodeURIComponent(batchNumber);
-        }
+            var brandName = document.getElementById('brandName').value;
+            var batchNumber = document.getElementById('batchNumber').value;
+            
+            // Store the form data in sessionStorage
+            sessionStorage.setItem('brandName', brandName);
+            sessionStorage.setItem('batchNumber', batchNumber);
+            
+            // Redirect to "Medtrust scan home1" page
+            window.location.href = "scancoderesult.html";
+        });
     </script>
 </body>
 </html>

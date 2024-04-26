@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Medtrust scan home</title>
+    <title>Medtrust scan home1</title>
 </head>
 <body>
     <div class="entercode1-container">
@@ -99,6 +99,7 @@
 
                     
                 </div>
+                
 
                 
             
@@ -108,10 +109,22 @@
         </div>
     </div>
     <script>
-        // Add JavaScript to redirect after 15 seconds
-        setTimeout(function() {
-            window.location.href = "scanreal5.html";
-        }, 10000); // 15 seconds in milliseconds
+        // Delay the redirection by 10 seconds after the page loads
+        setTimeout(function () {
+            // Get the form data from sessionStorage
+            var brandName = sessionStorage.getItem('brandName');
+            var batchNumber = sessionStorage.getItem('batchNumber');
+    
+            // Check if the input values match the expected values
+            if (brandName === "Accesslife tramadol capsule" && batchNumber === "A4-100153") {
+                // Redirect to scanrealresult.html
+                window.location.href = "scanrealresult.html";
+            } else {
+                // Redirect to scanerror.html
+                window.location.href = "scanerror.html";
+            }
+        }, 10000);
     </script>
+    
 </body>
 </html>
