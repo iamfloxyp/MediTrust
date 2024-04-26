@@ -901,8 +901,9 @@ footer h5 {
 }
 .medtrust {
   flex-grow: 1;
-  margin: 3rem 2.5rem 2rem 5.5rem;
+  margin: 5rem 1rem 1rem 2.5rem;
   color: #666666;
+ 
 }
 .medtrust h4 {
   font-family: "Inter", sans-serif;
@@ -1795,7 +1796,7 @@ padding:  20px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 6%;
+  height: 7%;
 }
 .scan2-nav .logo-nav{
   display: flex;
@@ -2024,7 +2025,7 @@ padding:  20px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 6%;
+  height: 7%;
 }
 .scan3-nav .logo-nav{
   display: flex;
@@ -2931,7 +2932,7 @@ padding:  20px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 6%;
+  height: 7%;
 }
 .entercode-nav .logo-nav{
   display: flex;
@@ -3154,7 +3155,7 @@ padding:  20px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 6%;
+  height: 7%;
 }
 .entercode1-nav .logo-nav{
   display: flex;
@@ -3399,7 +3400,7 @@ padding:  20px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 8%;
+  height: 7%;
 }
 .scanfake-nav .logo-nav{
   display: flex;
@@ -4851,7 +4852,7 @@ flex-direction: column;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 5%;
+  height: 7%;
 }
 .notification-nav .logo-nav {
   display: flex;
@@ -6097,7 +6098,7 @@ flex-direction: column;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 8%;
+  height: 7%;
 }
 .notimessage-nav .logo-nav{
   display: flex;
@@ -7624,7 +7625,7 @@ font-family: "Montserrat" sans-serif;
   display: flex;
   justify-content: space-between;
   padding: 0.6rem;
-  height: 6%;
+  height: 7%;
 }
 .helpcenter-nav .logo-nav{
   display: flex;
